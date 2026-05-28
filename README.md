@@ -1,90 +1,90 @@
 # Asclepius - Skin Cancer Detection App
 
-Aplikasi **Asclepius** adalah proyek submission (tugas akhir) untuk kelas **Belajar Penerapan Machine Learning untuk Android** dari **Dicoding**. Aplikasi ini mengimplementasikan Machine Learning di perangkat (*on-device*) menggunakan TensorFlow Lite untuk mendeteksi indikasi kanker kulit dari gambar galeri secara cepat, efisien, dan aman tanpa memerlukan pemrosesan cloud.
+The **Asclepius** application is the final project submission for the **"Belajar Penerapan Machine Learning untuk Android"** (Learning Machine Learning Application for Android) course by **Dicoding**. This application implements on-device Machine Learning using TensorFlow Lite to detect indications of skin cancer from gallery images quickly, efficiently, and securely without requiring cloud-based processing.
 
 ---
 
-## 📚 Tentang Kelas: Belajar Penerapan Machine Learning untuk Android
+## 📚 About the Course: Learning Machine Learning Application for Android
 
-Kelas ini ditujukan bagi Android Developer yang ingin meningkatkan keterampilannya dalam mengintegrasikan *machine learning* di ekosistem Android. Total waktu yang dibutuhkan untuk menyelesaikan materi kelas ini adalah **60 jam**.
+This course is designed for Android Developers who want to enhance their skills in integrating machine learning models into the Android ecosystem. The total duration required to complete this course is **60 hours**.
 
-### Materi yang Dipelajari:
+### Course Modules & Syllabus:
 
-1. **Machine Learning di Android (4 Jam)**
-   * Memahami alasan penggunaan Machine Learning secara lokal di perangkat Android.
-   * Mempelajari contoh-contoh implementasi serta framework pendukung.
-2. **Konsep Dasar Android untuk Machine Learning (6 Jam)**
-   * Mendalami komponen dasar Android seperti *Custom View*, akses Kamera, dan Galeri.
-   * Mempelajari integrasi API berbasis cloud menggunakan **Retrofit**.
-3. **ML Kit (7 Jam)**
-   * Implementasi solusi siap pakai (out-of-the-box) tanpa harus melatih model sendiri.
-   * Contoh: *Text Recognition*, *Translation*, dan *Barcode Scanning*.
-4. **TensorFlow Lite (9 Jam)**
-   * Memahami cara mencari dan menyesuaikan model kustom (*Custom Model*).
-   * Menerapkan model TensorFlow Lite untuk kasus *Image Classification*, *Object Detection*, dan *Prediction*.
-5. **MediaPipe (6 Jam)**
-   * Menggunakan MediaPipe sebagai abstraksi TFLite yang lebih tinggi untuk pemrosesan media real-time.
-   * Menggunakan MediaPipe Studio untuk pengujian model secara visual.
-6. **Firebase ML (4 Jam)**
-   * Mempelajari distribusi model secara dinamis (*Over-The-Air* / OTA) untuk memperbarui model tanpa merilis ulang aplikasi.
-7. **Generative AI (6 Jam)**
-   * Menerapkan AI Generatif dengan ML Kit dan TensorFlow Lite untuk fitur *Smart Reply* dan *BERT Question & Answer*.
+1. **Machine Learning on Android (4 Hours)**
+   * Understand the reasons for using Machine Learning locally on Android devices with real-world use cases.
+   * Learn about various frameworks and tools available for mobile ML deployment.
+2. **Android Basic Concepts for Machine Learning (6 Hours)**
+   * Deepen knowledge of core Android components used in ML integrations, such as Custom Views, Camera APIs, and Gallery Access.
+   * Learn about cloud-based machine learning integration using **Retrofit**.
+3. **ML Kit (7 Hours)**
+   * Learn to apply pre-trained, out-of-the-box ML models directly without custom training.
+   * Examples: *Text Recognition*, *Translation*, and *Barcode Scanning*.
+4. **TensorFlow Lite (9 Hours)**
+   * Search, select, and customize *Custom Models* for mobile.
+   * Implement TensorFlow Lite for *Image Classification*, *Object Detection*, and *Prediction*.
+5. **MediaPipe (6 Hours)**
+   * Learn to use MediaPipe as a higher abstraction layer over TensorFlow Lite for complex, real-time media processing.
+   * Explore MediaPipe Studio to test and configure models visually.
+6. **Firebase ML (4 Hours)**
+   * Learn dynamic model hosting and Over-The-Air (OTA) model updates without needing to republish the app.
+7. **Generative AI (6 Hours)**
+   * Get creative with Generative AI using ML Kit and TensorFlow Lite to build smart interactions like *Smart Reply* and *BERT Question & Answer*.
 
 ---
 
-## 🚀 Fitur Utama Aplikasi Asclepius
+## 🚀 Key Features
 
-Aplikasi ini dibangun untuk melakukan analisis gambar kulit secara on-device dengan fitur-fitur pendukung sebagai berikut:
+This application is built to perform skin image analysis locally with the following features:
 
 * 🧠 **On-Device Image Classification (TensorFlow Lite)**
-  Mengklasifikasikan gambar kulit apakah terindikasi **Cancer** atau **Non Cancer** lengkap dengan *Confidence Score*. Pemrosesan berjalan secara asinkron di *background thread* untuk menjaga UI tetap responsif.
+  Classifies skin images as **Cancer** or **Non Cancer** complete with a *Confidence Score*. Processing runs asynchronously in a background thread to keep the user interface smooth and responsive.
 * ✂️ **Image Cropping (uCrop Integration)**
-  Memungkinkan pengguna untuk memotong (*crop*), merotasi, dan memperbesar gambar sebelum dianalisis, guna meningkatkan akurasi klasifikasi dengan memfokuskan area kulit bermasalah.
+  Allows users to crop, rotate, and zoom the selected image before analysis to focus precisely on the skin lesion, improving classification accuracy.
 * 📦 **Local Database History (Room Database)**
-  Menyimpan hasil pemeriksaan sebelumnya (gambar teranalisis, label diagnosis, nilai kepercayaan, dan waktu pemeriksaan) ke penyimpanan lokal secara permanen. Pengguna dapat melihat daftar riwayat dan menghapus riwayat yang diinginkan.
+  Saves classification results locally (analyzed image path, diagnostic label, confidence level, and timestamp). Users can view the history list and delete records at any time.
 * 📰 **Health News (Retrofit API Integration)**
-  Menyajikan artikel berita terbaru bertema kesehatan kulit secara real-time dari Web API menggunakan Retrofit dan GSON parser.
+  Displays the latest skin-health-related articles in real-time from a Web API using Retrofit and GSON parser.
 
 ---
 
-## 🛠️ Struktur Proyek (Isi Project)
+## 🛠️ Project Directory Structure
 
-Proyek ini menggunakan arsitektur bersih (*Clean Architecture* sederhana) dengan pemisahan tugas (*Separation of Concerns*):
+The project follows a clean and structured architecture:
 
 ```
 app/src/main/java/com/dicoding/asclepius/
 ├── data/
 │   ├── local/
-│   │   ├── dao/          # Data Access Object (DAO) untuk Room Database
-│   │   ├── database/     # Inisialisasi Room Database (PredictionDatabase)
-│   │   └── entity/       # Struktur Data tabel riwayat (PredictionHistory)
+│   │   ├── dao/          # Data Access Object (DAO) for Room Database operations
+│   │   ├── database/     # Room Database Initialization (PredictionDatabase)
+│   │   └── entity/       # Database Schema entity (PredictionHistory)
 │   ├── remote/
-│   │   ├── api/          # Konfigurasi Retrofit & Endpoint API (NewsApiService)
-│   │   └── response/     # Model data JSON (NewsResponse)
-│   └── repository/       # Repository untuk menjembatani data lokal/remote ke ViewModel
+│   │   ├── api/          # Retrofit Configuration & Endpoint Interface (NewsApiService)
+│   │   └── response/     # GSON data response models (NewsResponse)
+│   └── repository/       # Repository layer to bridge local/remote data sources with ViewModels
 ├── helper/
-│   └── ImageClassifierHelper.kt   # Helper TFLite Task Library untuk inisialisasi & klasifikasi gambar
+│   └── ImageClassifierHelper.kt   # TFLite Task Library helper for initializing the model & running inference
 └── view/
-    ├── MainActivity.kt   # Layar utama (Pilih Gambar, Potong Gambar, Jalankan Analisis)
-    ├── ResultActivity.kt # Layar hasil (Menampilkan diagnosis & tombol simpan riwayat)
-    ├── HistoryActivity.kt# Layar riwayat diagnosis tersimpan
-    ├── NewsActivity.kt   # Layar daftar berita kesehatan
-    └── *ViewModel & *Adapter untuk masing-masing layar
+    ├── MainActivity.kt   # Main Screen (select image, initiate crop, trigger classification)
+    ├── ResultActivity.kt # Result Screen (display diagnosis, save result to local database)
+    ├── HistoryActivity.kt# History Screen (view and delete saved analysis records)
+    ├── NewsActivity.kt   # News Screen (displays healthy skin articles in a list)
+    └── *ViewModel & *Adapter classes for respective screens
 ```
 
 ---
 
-## ⚙️ Persyaratan Sistem & Dependensi
+## ⚙️ Requirements & Dependencies
 
-Untuk menjalankan proyek ini di perangkat lokal Anda, pastikan sistem Anda memenuhi persyaratan berikut:
+To build and run this application on your local machine, ensure you meet the following prerequisites:
 
-* **Android Studio**: Koala / Ladybug atau versi yang lebih baru.
-* **JDK**: Versi 17.
+* **Android Studio**: Koala / Ladybug or newer.
+* **JDK**: Version 17.
 * **Minimum SDK**: API 21 (Android 5.0).
 * **Target SDK**: API 34 (Android 14).
 
-### Pustaka Penting yang Digunakan:
-* `org.tensorflow:tensorflow-lite-task-vision`: Pustaka utama untuk menjalankan klasifikasi gambar secara lokal.
-* `com.github.yalantis:ucrop`: Pustaka manipulasi / cropping gambar.
-* `androidx.room:room-runtime`: Pustaka ORM untuk basis data lokal.
-* `com.squareup.retrofit2:retrofit`: Pustaka HTTP Client untuk mengambil data berita.
+### Key Dependencies Used:
+* `org.tensorflow:tensorflow-lite-task-vision`: Core library for on-device image classification.
+* `com.github.yalantis:ucrop`: Image cropping and editing library.
+* `androidx.room:room-runtime`: Local database ORM.
+* `com.squareup.retrofit2:retrofit`: HTTP Client for fetching remote health articles.
