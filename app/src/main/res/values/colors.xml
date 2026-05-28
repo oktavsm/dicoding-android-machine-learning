@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="primary">#00BFA5</color>
+    <color name="primary_dark">#00897B</color>
+    <color name="primary_variant">#B2DFDB</color>
+    <color name="primary_container">#E0F2F1</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#004D40</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#546E7A</color>
+    <color name="secondary_container">#CFD8DC</color>
+
+    <!-- Background & Surface -->
+    <color name="background">#F8FFFE</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F0FAF9</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="card_stroke">#E0F2F1</color>
+
+    <!-- Result Colors -->
+    <color name="cancer_color">#E53935</color>
+    <color name="cancer_bg">#FFEBEE</color>
+    <color name="non_cancer_color">#43A047</color>
+    <color name="non_cancer_bg">#E8F5E9</color>
+    <color name="warning_color">#FB8C00</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A2E35</color>
+    <color name="text_secondary">#546E7A</color>
+    <color name="text_hint">#90A4AE</color>
+    <color name="text_on_teal">#FFFFFF</color>
+
+    <!-- Utility -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="divider">#E8F0EE</color>
+    <color name="shimmer_base">#F0FAF9</color>
+    <color name="shimmer_highlight">#FFFFFF</color>
+
+    <!-- Overlay -->
+    <color name="scrim">#80000000</color>
+</resources>

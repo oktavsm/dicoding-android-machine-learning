@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Asclepius</string>
+    <string name="app_tagline">Skin Cancer Detection</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Pilih dari Galeri</string>
+    <string name="analyze">Analyze Image</string>
+    <string name="result">Hasil Analisis</string>
+    <string name="save">Simpan Hasil</string>
+    <string name="save_success">Hasil berhasil disimpan!</string>
+    <string name="save_failed">Gagal menyimpan hasil.</string>
+    <string name="scan_again">Scan Lagi</string>
+    <string name="no_image_selected">Silakan pilih gambar terlebih dahulu</string>
+    <string name="processing">Memproses gambar…</string>
+    <string name="failed_to_process">Gagal memproses gambar. Silakan coba lagi.</string>
+    <string name="classification_error">Terjadi kesalahan saat klasifikasi: %1$s</string>
+    <string name="confidence_score">Confidence Score: %1$.1f%%</string>
+    <string name="cancer_label">Cancer</string>
+    <string name="non_cancer_label">Non Cancer</string>
+    <string name="result_cancer">Terdeteksi Kanker Kulit</string>
+    <string name="result_non_cancer">Tidak Terdeteksi Kanker</string>
+    <string name="result_subtitle_cancer">Segera konsultasikan dengan dokter spesialis kulit.</string>
+    <string name="result_subtitle_non_cancer">Kulit Anda tampak sehat. Tetap jaga kesehatan!</string>
+    <string name="history">Riwayat</string>
+    <string name="history_empty">Belum ada riwayat pemeriksaan</string>
+    <string name="history_empty_desc">Hasil pemeriksaan Anda akan muncul di sini</string>
+    <string name="news">Artikel Kesehatan</string>
+    <string name="news_empty">Tidak ada artikel ditemukan</string>
+    <string name="news_loading">Memuat artikel…</string>
+    <string name="news_error">Gagal memuat artikel. Periksa koneksi internet Anda.</string>
+    <string name="news_retry">Coba Lagi</string>
+    <string name="read_more">Baca Selengkapnya</string>
+    <string name="delete">Hapus</string>
+    <string name="delete_confirm">Hapus riwayat ini?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="back">Kembali</string>
+    <string name="image_content_desc">Gambar yang dianalisis</string>
+    <string name="placeholder_desc">Placeholder gambar</string>
+    <string name="health_news">Berita Kesehatan</string>
+    <string name="prediction_history">Riwayat Prediksi</string>
+    <string name="analyzed_at">Diperiksa: %1$s</string>
+    <string name="select_and_analyze">Pilih gambar kulit lalu tekan Analyze</string>
+</resources>

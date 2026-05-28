@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Asclepius" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+
+        <!-- Background -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Typography — Nunito -->
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+
+        <!-- Shape -->
+        <item name="shapeCornerFamily">rounded</item>
+    </style>
+
+    <style name="Theme.Asclepius" parent="Base.Theme.Asclepius" />
+
+    <!-- Text Styles -->
+    <style name="TextAppearance.Asclepius.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Asclepius.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Asclepius.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Asclepius.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.Asclepius.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="Widget.Asclepius.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="Widget.Asclepius.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/card_surface</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="Widget.Asclepius.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/surface</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Asclepius.Title</item>
+    </style>
+
+    <!-- BottomNavigationView -->
+    <style name="Widget.Asclepius.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_selector</item>
+    </style>
+</resources>
